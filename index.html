@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Final</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h2>FORMULARIO DE CONTACTO</h2>
+    <form class="formulario" id="formulario">
+        <h4>Nombre Completo</h4>
+        <input id="nombre" type="text" placeholder="Introduce Nombre:" required>
+        <br><br>
+
+        <h4>Correo Electronico</h4>
+        <input id="correo" type="email" placeholder="Correo electronico:" required>
+        <br><br>
+
+        <h4>Asunto</h4>
+        <input id="asunto" type="text" placeholder="Asunto:" required>
+        <br><br>
+
+        <h4>Mensaje</h4>
+        <textarea id="mensaje" cols="30" rows="10" placeholder="Mensaje:"></textarea>
+        <br><br>
+
+        <div class="cajabtn">
+          <button type="button" onclick="capturar()" value="enviar">Enviar</button>
+          <button type="subbuttonmit" onclick="reset()" class="btn2" value="enviar">Limpiar</button>
+        </form>
+    
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

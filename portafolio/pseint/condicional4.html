@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional 4</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+    <div class="cajaImg">
+        <p>4. La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</p>
+        <pre>
+Proceso condicional_4
+            Definir nombreCompleto Como Caracter;
+            Definir pelicula1,pelicula2,pelicula3,pelicula4,pelicula5 Como Caracter;
+            Definir pelicula, opcion,problema Como entero;
+            Definir peliculaElegida, anotacion Como Caracter;
+            
+            
+            pelicula1 <- "Harry Potter";
+            pelicula2 <- "Camino hacia El Terror";
+            pelicula3 <- "La Casa de Cera";
+            pelicula4 <- "Juegos Macabros";
+            pelicula5 <- "Jack El Cazagigantes";
+        
+            
+            
+            Escribir "************ BIENVENIDOS A LA VIDEOTIENDA ************";
+            Escribir "************* DIR: BARRIO EL PORVERNIR ********";
+            
+            
+            Escribir "Por favor Registre su Nombre y apellidos en Nuestra Base de datos";
+            leer nombreCompleto;
+            
+            Escribir "Elija una de Las Siguientes Opciones:";
+            Escribir  "1. Alquilar Pelicula";
+            Escribir  "2. Consultar Peliculas Disponibles";
+            Escribir  "3. Recibir Pelicula";
+            Leer opcion;
+            Segun opcion hacer
+                
+                1:
+                        Escribir "Bienvenido señor ", nombreCompleto, " Tenemos Estas Peliculas Disponibles Para Usted, Cual de estas Series Le gustaria Alquilar?";
+                        Escribir " ";
+                        Escribir "1. ", pelicula1;
+                        Escribir "2. ", pelicula2;
+                        Escribir "3. ", pelicula3;
+                        Escribir "4. ", pelicula4;
+                        Escribir "5. ", pelicula5;
+                        Leer pelicula;
+                        
+                        Segun pelicula Hacer
+                            1:
+                                Escribir "SEÑOR ", nombreCompleto, " DESEA USTED ALQUILAR LA PELICULA: ", pelicula1, "?";
+                                Leer peliculaElegida;
+                                Limpiar Pantalla;
+                                si peliculaElegida = "si" o peliculaElegida = "SI" Entonces
+                                    Escribir "HAS ELEGIDO LA SERIE ", pelicula1 , " GRACIAS POR SU ALQUILER, QUE LA DISFRUTE";
+                                    Escribir " ";
+                                SiNo
+                                    Escribir "Estimado Usuario, Lo Invitamos a Volver a Ver El Catalogo de Peliculas Disponibles";
+                                FinSi
+                                
+                            2:
+                                Escribir "SEÑOR ", nombreCompleto, " DESEA USTED ALQUILAR LA PELICULA: ", pelicula2, "?";
+                                Leer peliculaElegida;
+                                Limpiar Pantalla;
+                                si peliculaElegida = "si" o peliculaElegida = "SI" Entonces
+                                    Escribir  "HAS ELEGIDO LA SERIE ", pelicula2 , " GRACIAS POR SU ALQUILER, QUE LA DISFRUTE";
+                                    Escribir " ";
+                                SiNo
+                                    Escribir "Estimado Usuario, Lo Invitamos a Volver a Ver El Catalogo de Peliculas Disponibles";
+                                FinSi
+                            3:
+                                Escribir "SEÑOR ", nombreCompleto, " DESEA USTED ALQUILAR LA PELICULA: ", pelicula3, "?";
+                                Leer peliculaElegida;
+                                Limpiar Pantalla;
+                                si peliculaElegida = "si" o peliculaElegida = "SI" Entonces
+                                    Escribir  "HAS ELEGIDO LA SERIE ", pelicula3 , " GRACIAS POR SU ALQUILER, QUE LA DISFRUTE";
+                                    Escribir " ";
+                                SiNo
+                                    Escribir "Estimado Usuario, Lo Invitamos a Volver a Ver El Catalogo de Peliculas Disponibles";
+                                FinSi
+                            4:
+                                Escribir "SEÑOR ", nombreCompleto, " DESEA USTED ALQUILAR LA PELICULA: ", pelicula4, "?";
+                                Leer peliculaElegida;
+                                Limpiar Pantalla;
+                                si peliculaElegida = "si" o peliculaElegida = "SI" Entonces
+                                    Escribir  "HAS ELEGIDO LA SERIE ", pelicula4 , " GRACIAS POR SU ALQUILER, QUE LA DISFRUTE";
+                                    Escribir " ";
+                                SiNo
+                                    Escribir "Estimado Usuario, Lo Invitamos a Volver a Ver El Catalogo de Peliculas Disponibles";
+                                FinSi
+                            5:	
+                                Escribir "SEÑOR ", nombreCompleto, " DESEA USTED ALQUILAR LA PELICULA: ", pelicula5, "?";
+                                Leer peliculaElegida;
+                                Limpiar Pantalla;
+                                si peliculaElegida = "si" o peliculaElegida = "SI" Entonces
+                                    Escribir  "HAS ELEGIDO LA SERIE ", pelicula5 , " GRACIAS POR SU ALQUILER, QUE LA DISFRUTE";
+                                    Escribir " ";
+                                SiNo
+                                    Escribir "Estimado Usuario, Lo Invitamos a Volver a Ver El Catalogo de Peliculas Disponibles";
+                                FinSi
+                                    
+                            De Otro Modo:
+                                Escribir "Opcion Invalida";
+                        FinSegun
+                        
+                        
+                2:
+                        Escribir "Las Peliculas Disponibles Hasta el Momento Son las Siguientes:";
+                        Escribir "1. ", pelicula1;
+                        Escribir "2. ", pelicula2;
+                        Escribir "3. ", pelicula3;
+                        Escribir "4. ", pelicula4;
+                        Escribir "5. ", pelicula5;
+                        
+                        
+                3:
+                        Escribir "CUENTENOS SI TUVO ALGUN PROBLEMA AL REPRODUCIR SU PELICULA, SI PRESENTO DAÑOS, CONFIRME CON UN (SI), DE LO CONTRARIO PRESIONE (NO) O OMITA";
+                        Leer anotacion;
+                        Si anotacion="SI" o anotacion="si" Entonces
+                            Escribir "Que Pelicula fue la que Alquilo?";
+                            Escribir "1. ", pelicula1;
+                            Escribir "2. ", pelicula2;
+                            Escribir "3. ", pelicula3;
+                            Escribir "4. ", pelicula4;
+                            Escribir "5. ", pelicula5;
+                            leer problema;
+                            Segun problema Hacer
+                                1:
+                                    Escribir " ";
+                                    Escribir "LAMENTAMOS MUCHO QUE HAYAS TENIDO PROBLEMAS DE DAÑO CON RESPECTO A LA PELICULA ", pelicula1 , " TRABAJAREMOS PARA QUE CASOS COMO ESTE NO SE VUELVAN A REPETIR, UNA DISCULPA DE ANTEMANO";
+                                2:
+                                    Escribir " ";
+                                    Escribir "LAMENTAMOS MUCHO QUE HAYAS TENIDO PROBLEMAS DE DAÑO CON RESPECTO A LA PELICULA ", pelicula2 , " TRABAJAREMOS PARA QUE CASOS COMO ESTE NO SE VUELVAN A REPETIR, UNA DISCULPA DE ANTEMANO";
+                                3:
+                                    Escribir " ";
+                                    Escribir "LAMENTAMOS MUCHO QUE HAYAS TENIDO PROBLEMAS DE DAÑO CON RESPECTO A LA PELICULA ", pelicula3 , " TRABAJAREMOS PARA QUE CASOS COMO ESTE NO SE VUELVAN A REPETIR, UNA DISCULPA DE ANTEMANO";
+                                4:
+                                    Escribir " ";
+                                    Escribir "LAMENTAMOS MUCHO QUE HAYAS TENIDO PROBLEMAS DE DAÑO CON RESPECTO A LA PELICULA ", pelicula4 , " TRABAJAREMOS PARA QUE CASOS COMO ESTE NO SE VUELVAN A REPETIR, UNA DISCULPA DE ANTEMANO";
+                                5:
+                                    Escribir " ";
+                                    Escribir "LAMENTAMOS MUCHO QUE HAYAS TENIDO PROBLEMAS DE DAÑO CON RESPECTO A LA PELICULA ", pelicula5 , " TRABAJAREMOS PARA QUE CASOS COMO ESTE NO SE VUELVAN A REPETIR, UNA DISCULPA DE ANTEMANO";
+                                    
+                                De Otro Modo:
+                                    Escribir "Opcion No Valida";
+                            FinSegun
+                                
+                        SiNo
+                                Escribir " ";
+                                Escribir "GRACIAS POR SU APORTE QUERIDO CLIENTE";
+                        FinSi
+                        
+                        
+            FinSegun
+                
+                        
+FinProceso
+        
+        </pre>
+    </div>
+    
+
+
+
+    <script src="../script.js"></script>
+</body>
+</html>

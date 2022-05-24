@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 4-2</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+    
+    <div class="cajaImg">
+        <p>4.2. Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.</p>
+        <p>01 02 03 04 05 <br>
+           10 09 08 07 06 <br>
+           11 12 13 14 15 <br>
+           20 19 18 17 16</p>
+        <pre>
+Proceso arreglo_4_2
+            Definir matriz,i,j,x,fila2,columna2 Como Entero;
+            Dimension matriz[4,5];
+            x<-1;
+            
+            Para i<-0 hasta 3 con paso 1 Hacer
+                Para j<-0 hasta 4 Con Paso 1 Hacer
+                    matriz[i,j] <- x;
+                    x<-x+1;
+                FinPara
+            FinPara
+            
+            Para fila2 <-0 hasta 3 Con Paso 1  Hacer
+                Para columna2 <-0 hasta 4 Con Paso 1  Hacer
+                    Si fila2 mod 2 = 0 Entonces
+                        
+                        Escribir matriz[fila2, columna2], " " Sin Saltar;
+                    SiNo
+                        Escribir matriz[fila2, 4-columna2], " " Sin Saltar;
+                    FinSi
+                FinPara
+                Escribir " ";
+            FinPara
+            Escribir " ";
+FinProceso
+        
+        
+        </pre>
+    </div>
+    
+
+    <script src="../script.js"></script>
+</body>
+</html>

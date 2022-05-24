@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones de Arreglos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="cajaImg" >
+        <p>Ejercicios Pasados Dentro de Funciones</p>
+        <p>Arreglo 1</p>
+        <pre>
+SubProceso numbers()
+	Definir datos, i Como Entero;
+	Dimension datos[5];
+	
+	
+	Para i <- 0 Hasta 4 Con Paso 1 Hacer
+		Escribir "Escribe el Numero ", i+1;
+		Leer datos[i];
+	FinPara
+	Escribir " ";
+	Para i<- 0 Hasta 4 Con Paso 1 Hacer
+		Escribir "[",[i],"] = ", datos[i];
+	FinPara
+FinSubProceso
+
+Proceso funcion_arreglo_1
+	numbers();
+FinProceso
+
+        </pre>
+
+    </div>
+    <div class="cajaImg">
+        <p>Arreglo 2</p>
+        <pre>
+SubProceso paresEImpares()
+            Definir vector, i,a Como Entero;
+            Dimension vector[20];
+            i <- 0;
+            a <- 0;
+            
+            Mientras i <= 19 Hacer
+                vector[i] <- azar[100];
+                i <- i +1;
+                
+            FinMientras
+            
+            Repetir
+                Escribir vector[a];
+                a <- a+1;
+            Hasta Que a = i;
+            
+            Escribir " ";
+            Escribir "Numeros Pares:";
+            Para a<-0 Hasta 19 Con Paso 1 Hacer
+                Si vector[a] % 2 == 0 Entonces
+                    Escribir vector[a] , "," , Sin Saltar;
+                    
+                FinSi
+            FinPara
+            Escribir " ";
+            Escribir " ";
+            Escribir "Numeros Impares:";
+            Para a<-0 Hasta 19 Con Paso 1 Hacer
+                Si vector[a] % 2 <> 0 Entonces
+                    Escribir vector[a] , "," , Sin Saltar;
+                    
+                FinSi
+            FinPara
+            
+            
+        FinSubProceso
+        
+Proceso funcion_arreglos_2
+    paresEImpares();
+FinProceso
+         
+        </pre>
+    </div>
+    <div class="cajaImg">
+        <p>Arreglo 3</p>
+        <pre>
+SubProceso numPrimos()
+	Definir x,num,contador Como Entero;
+	Para num <- 1 Hasta 1000 Con Paso 1 Hacer
+		x <- 1;
+		contador <- 0;
+		Mientras x <= num Hacer
+			Si num mod x == 0 Entonces
+				contador <- contador + 1;
+			FinSi
+			x <- x+ 1;
+		FinMientras
+		
+		Si contador == 2 Entonces
+			Escribir "El numero ", num, " Es Primo";
+			
+		FinSi
+	FinPara
+	
+FinSubProceso
+
+Proceso funcion_arreglos_3
+	numPrimos();
+FinProceso
+
+        </pre>
+    </div>
+    <div class="cajaImg">
+        <p>Arreglo 4</p>
+        <pre>
+SubProceso filasYColumnas()
+	Definir arr,i,j Como Entero;
+	Dimension arr[5, 4];
+	i<-0; j<-0;
+	arr[0,0]<-1;
+	arr[1,0]<-2;
+	arr[2,0]<-3;
+	arr[3,0]<-4;
+	arr[4,0]<-5;
+	
+	arr[0,1]<-6;
+	arr[1,1]<-7;
+	arr[2,1]<-8;
+	arr[3,1]<-9;
+	arr[4,1]<-10;
+	
+	arr[0,2]<-11;
+	arr[1,2]<-12;
+	arr[2,2]<-13;
+	arr[3,2]<-14;
+	arr[4,2]<-15;
+	
+	arr[0,3]<-16;
+	arr[1,3]<-17;
+	arr[2,3]<-18;
+	arr[3,3]<-19;
+	arr[4,3]<-20;
+	
+	
+	Para i<-0 Hasta 4-1 Con Paso 1 Hacer
+		Para j<-0 Hasta 5-1 Con Paso 1 Hacer
+			Si arr[j,i] < 10 Entonces
+				Escribir Sin Saltar "0";
+				
+			FinSi
+			Escribir arr[j,i], " ", Sin Saltar;
+		FinPara
+		Escribir " ";
+	FinPara	
+FinSubProceso
+
+Proceso funcion_arreglos_4
+	filasYColumnas();
+FinProceso
+
+        </pre>
+    </div>
+    <div class="cajaImg">
+        <p>Arreglo 4-2</p>
+        <pre>
+SubProceso filasYColumnas()
+	Definir matriz,i,j,x,fila2,columna2 Como Entero;
+	Dimension matriz[4,5];
+	x<-1;
+	
+    Para i<-0 hasta 3 con paso 1 Hacer
+        Para j<-0 hasta 4 Con Paso 1 Hacer
+            matriz[i,j] <- x;
+            x<-x+1;
+        FinPara
+    FinPara
+	
+    Para fila2 <-0 hasta 3 Con Paso 1  Hacer
+        Para columna2 <-0 hasta 4 Con Paso 1  Hacer
+            Si fila2 mod 2 = 0 Entonces
+				
+                Escribir matriz[fila2, columna2], " " Sin Saltar;
+            SiNo
+                Escribir matriz[fila2, 4-columna2], " " Sin Saltar;
+            FinSi
+        FinPara
+        Escribir " ";
+    FinPara
+    Escribir " ";
+	
+FinSubProceso
+
+        </pre>
+
+    </div>
+    <div class="cajaImg">
+        <p>Arreglo 5</p>
+        <pre>
+SubProceso tablaNumerica()
+	Definir matriz,i,j Como Entero;
+	Dimension matriz[10,10];
+	
+	Para i<-0 Hasta 9 Con Paso 1 Hacer
+		Para j<-0 Hasta 9 Con Paso 1 Hacer
+			Escribir Sin Saltar j+1, "x", i+1, "   ";
+			matriz[i,j] <- i*j;
+		FinPara
+		Escribir " ";
+		
+		
+	FinPara
+	Escribir " ";
+	Escribir "Ingrese la fila y la columna que desee:";
+	Escribir "fila:";
+	leer i;
+	Escribir "columna:";
+	Leer j;
+	Escribir i*j;
+	
+FinSubProceso
+
+Proceso funcion_arreglos_5
+	tablaNumerica();
+FinProceso
+
+        </pre>
+
+    </div>
+
+
+
+    <script src="../script.js"></script>
+</body>
+</html>

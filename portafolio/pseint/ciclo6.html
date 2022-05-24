@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo 6</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+    <div class="cajaImg">
+        <p>6. Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</p>
+        <pre>
+Proceso ciclo_6
+            Definir nombre,empresa,eliminarMas Como Caracter;
+            Definir telefono, contactos, eleccion, decision, eliminarContacto Como Entero;
+        
+            Definir seguir Como Logico;
+            
+            eleccion <- 0;
+            contactos <- 0;
+            
+            
+            Repetir
+                Escribir "Opciones del Sistema";
+                Escribir "1. Registro de Usuarios";
+                Escribir "2. Usuarios Almacenados";
+                Escribir "3. Eliminar Contactos";
+                Leer eleccion;
+                Segun eleccion Hacer
+                    1:
+                        Escribir "Nombre Completo:";
+                        Leer nombre;
+                        
+                        Escribir "Numero de Telefono:";
+                        leer telefono;
+                        
+                        Escribir "Nombre de La Organizacion:";
+                        leer empresa;
+                        Escribir " ";
+                        contactos <- contactos + 1;
+                        Escribir "Registro Exitoso!";
+                        
+                    2:
+                        Escribir " ";
+                        Escribir "Los Usuarios Almacenados Son: ", contactos;
+                        
+                    3: 	Escribir "Desea Eliminar Contactos?";
+                        Escribir "1: SI";
+                        Escribir "2. NO";
+                        leer eliminarContacto;
+                        Escribir " ";
+                        Si contactos == 0 Entonces
+                            Escribir "Uppps! La Lista de Contactos Esta Vacia";
+                        SiNo
+                            Si eliminarContacto == 1 Entonces
+                                contactos <- contactos -1; 
+                                Escribir "El numero de contactos ahora es: ", contactos;
+                                Si contactos == 0 Entonces
+                                    Escribir "No Existen Contactos";
+                                
+                                FinSi
+                                
+                            FinSi
+                        FinSi
+                        
+                        
+                            
+                        
+                    De Otro Modo:
+                        Escribir "Opcion No Valida";
+                FinSegun
+                
+                
+                Escribir " ";
+                Escribir "DESEA CONTINUAR CON EL PROCESO?:";
+                Escribir "1: SI";
+                Escribir "2. NO";
+                leer decision;
+                Limpiar Pantalla;
+                Si decision = 1 Entonces
+                    seguir <- Verdadero;
+                SiNo
+                    seguir <- Falso;
+                FinSi
+                
+                Si contactos = 3 Entonces
+                    Escribir "Limite de Contactos Alcanzados";
+                    
+                    
+                FinSi
+                
+                
+                
+            Hasta Que  seguir = Falso O contactos == 3;
+              
+        
+            Escribir "Contactos Guardados ", "(", contactos, ")";
+            
+            
+FinProceso
+        
+        </pre>
+    </div>
+    
+
+
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo 7</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+    <div class="cajaImg">
+        <p>7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</p>
+        <pre>
+Proceso ciclo_7
+            Definir opcion, vehiculos, telefono, continuar, ref, vehiculoRef Como Entero;
+            Definir nombre , placa , marca Como Caracter;
+            Definir seguir Como Logico;
+            Definir vehiculoRef1,vehiculoRef2,vehiculoRef3,vehiculoRef4,vehiculoRef5 Como Entero;
+            vehiculoRef1 <- 0;
+            vehiculoRef2 <- 0;
+            vehiculoRef3 <- 0;
+            vehiculoRef4 <- 0;
+            vehiculoRef5 <- 0;
+            
+            vehiculos <- 0;
+                
+            
+            
+            Repetir
+                
+                Escribir "Parqueadero El Guardian, Bienvenidos";
+                Escribir "1. Ingresar al Parqueadero";
+                Escribir "2. Retirar Del Parqueadero";
+                Escribir "3. Consultar Vehiculos";
+                Leer opcion;
+                
+                    Segun opcion Hacer
+                        1:
+                            Escribir "Ingresa tu Nombre completo: ";
+                            leer nombre;
+                            
+                            Escribir "Digita tu Numero de telefono: ";
+                            leer telefono;
+                            
+                            Escribir "Registra la Placa de Tu vehiculo: ";
+                            Leer placa;
+                            
+                            Escribir "Marca Del vehiculo: ";
+                            leer marca;
+                            Escribir " ";
+                            Escribir "Ingreso Exitoso!";
+                            vehiculos <- vehiculos + 1;
+                            Escribir " ";
+                            Escribir "Escoge una Referencia para La Salida de tu Vehiculo";
+                            Escribir "#1";
+                            Escribir "#2";
+                            Escribir "#3";
+                            Escribir "#4";
+                            Escribir "#4";
+                            leer vehiculoRef;
+                            
+                            Segun vehiculoRef Hacer
+                                1:
+                                    Escribir "SU VEHICULO SE LE ASIGNO EL #", (vehiculoRef1 + 1) ," COMO REFERENCIA", " INGRESE SU REFERENCIA PARA GUARDARLA";
+                                    Leer  vehiculoRef1;		
+                                    Si vehiculoRef1 = vehiculoRef Entonces
+                                        Escribir "Asignado Exitosamente!";
+                                    SiNo
+                                        Escribir "ERROR! La Referencia no es La Correcta";
+                                        vehiculoRef1 <- 0;
+                                    FinSi
+                                2:
+                                    Escribir "SU VEHICULO SE LE ASIGNO EL #", (vehiculoRef2 + 2) ," COMO REFERENCIA"," INGRESE SU REFERENCIA PARA GUARDARLA";
+                                    Leer  vehiculoRef2;
+                                    Si vehiculoRef2 = vehiculoRef Entonces
+                                        Escribir "Asignado Exitosamente!";
+                                    SiNo
+                                        Escribir "ERROR! La Referencia no es La Correcta";
+                                        vehiculoRef2 <- 0;
+                                    FinSi
+                                3:
+                                    Escribir "SU VEHICULO SE LE ASIGNO EL #", (vehiculoRef3 + 3) ," COMO REFERENCIA"," INGRESE SU REFERENCIA PARA GUARDARLA";
+                                    Leer  vehiculoRef3;
+                                    Si vehiculoRef3 = vehiculoRef Entonces
+                                        Escribir "Asignado Exitosamente!";
+                                    SiNo
+                                        Escribir "ERROR! La Referencia no es La Correcta";
+                                        vehiculoRef3 <- 0;
+                                    FinSi
+                                4:
+                                    Escribir "SU VEHICULO SE LE ASIGNO EL #", (vehiculoRef4 + 4) ," COMO REFERENCIA"," INGRESE SU REFERENCIA PARA GUARDARLA";
+                                    Leer  vehiculoRef4;
+                                    Si vehiculoRef4 = vehiculoRef Entonces
+                                        Escribir "Asignado Exitosamente!";
+                                    SiNo
+                                        Escribir "ERROR! La Referencia no es La Correcta";
+                                        vehiculoRef4 <- 0;
+                                    FinSi
+                                5:
+                                    Escribir "SU VEHICULO SE LE ASIGNO EL #", (vehiculoRef5 + 5) ," COMO REFERENCIA"," INGRESE SU REFERENCIA PARA GUARDARLA";
+                                    Leer  vehiculoRef5;
+                                    Si vehiculoRef5 = vehiculoRef Entonces
+                                        Escribir "Asignado Exitosamente!";
+                                    SiNo
+                                        Escribir "ERROR! La Referencia no es La Correcta";
+                                        vehiculoRef5 <- 0;
+                                    FinSi
+                                De Otro Modo:
+                                    Escribir "Opcion No Valida";
+                            FinSegun
+                            
+                        
+                            Escribir " ";
+                            Si vehiculos == 5 Entonces
+                                Escribir "El Parqueadero Esta Lleno";
+                            
+                            FinSi
+                        2:
+                        
+                            Escribir "Cual es La referencia o Numero Asignado a Su Vehiculo?";
+                            Escribir "#1";
+                            Escribir "#2";
+                            Escribir "#3";
+                            Escribir "#4";
+                            Escribir "#5";
+                            leer ref;
+                            Segun ref Hacer
+                                1:
+                                    Si vehiculoRef1 == 1 Entonces
+                                        Escribir "Retirando Vehiculo #1 del Parqueadero";
+                                        vehiculos <- vehiculos -1;
+                                        vehiculoRef1 <- 0;
+                                    SiNo
+                                        Escribir "No existe Vehiculo Registrado Con ese Numero de Referencia";
+                                    FinSi
+                                    
+                                2:
+                                    Si vehiculoRef2 == 2 Entonces
+                                        Escribir "Retirando Vehiculo #2 del Parqueadero";
+                                        vehiculos <- vehiculos -1;
+                                        vehiculoRef2 <- 0;
+                                    SiNo
+                                        Escribir "No existe Vehiculo Registrado Con ese Numero de Referencia";
+                                    FinSi
+                                    
+                                3:
+                                    Si vehiculoRef3 == 3 Entonces
+                                        Escribir "Retirando Vehiculo #3 del Parqueadero";
+                                        vehiculos <- vehiculos -1;
+                                        vehiculoRef3 <- 0;
+                                    SiNo
+                                        Escribir "No existe Vehiculo Registrado Con ese Numero de Referencia";
+                                    FinSi
+                                    
+                                4:
+                                    Si vehiculoRef4 == 4 Entonces
+                                        Escribir "Retirando Vehiculo #4 del Parqueadero";
+                                        vehiculos <- vehiculos -1;
+                                        vehiculoRef4 <- 0;
+                                    SiNo
+                                        Escribir "No existe Vehiculo Registrado Con ese Numero de Referencia";
+                                    FinSi
+                                    
+                                5:
+                                    Si vehiculoRef5 == 5 Entonces
+                                        Escribir "Retirando Vehiculo #5 del Parqueadero";
+                                        vehiculos <- vehiculos -1;
+                                        vehiculoRef5 <- 0;
+                                    SiNo
+                                        Escribir "No existe Vehiculo Registrado Con ese Numero de Referencia";
+                                    FinSi
+                                    
+                                De Otro Modo:
+                                    Escribir "Opcion No Valida";
+                            FinSegun
+                            
+                        3:
+                            Escribir "Vehiculos Ingresados: ", vehiculos;
+                        De Otro Modo:
+                            
+                    FinSegun
+                    
+                    Si vehiculos == 0 Entonces
+                        Escribir "No Tenemos Vehiculos En nuestro Parqueadero Hasta El Momento";
+                        
+                    FinSi
+                    Escribir "Deseas Continuar en el Proceso?";
+                    Escribir "1. SI";
+                    Escribir "2. NO";
+                    leer continuar;
+                    Limpiar Pantalla;
+                    Si continuar == 1 Entonces
+                        seguir <- Verdadero;
+                    SiNo
+                        seguir <- Falso;
+                    FinSi
+                    
+                Hasta Que seguir = falso O vehiculos = 5;
+                
+                
+FinProceso
+        
+        </pre>
+    </div>
+    
+
+
+
+    <script src="../script.js"></script>
+</body>
+</html>

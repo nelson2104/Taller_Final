@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo 3</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+    <div class="cajaImg">
+        <p>3. Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</p>
+        <img src="../img/arbol.png">
+        <pre>
+Proceso ciclo_3
+        Definir a,b,c Como Entero;
+        Definir incremento Como Entero;
+            a<-11;
+            
+            Repetir
+                b<-0;
+                c<-0;
+                
+                Repetir
+                    Escribir Sin Saltar " "; 
+                    b<- b+1;
+                Hasta Que b = a
+                Repetir
+                    Escribir Sin Saltar "*";
+                    c <- c+1;
+                Hasta Que c = 12 - a;
+            
+            
+            c <-0;
+            
+            Si a <> 11 Entonces
+                Repetir
+                    Escribir Sin Saltar "*";
+                    c <- c+1;
+                Hasta Que c = 11 - a;
+            FinSi
+            Escribir " ";
+            a <- a -1;
+        Hasta Que a = 0;
+        
+        
+        incremento <- 0;
+        Repetir
+            Escribir " " Sin Saltar;
+            incremento <- incremento + 1;
+        Hasta Que incremento = 10;
+        Escribir "***";
+        
+        incremento <- 0;
+        Repetir
+            Escribir " " Sin Saltar;
+            incremento <- incremento + 1;
+        Hasta Que incremento = 10;
+        Escribir "***";
+        
+        incremento <- 0;
+        Repetir
+            Escribir " " Sin Saltar;
+            incremento <- incremento + 1;
+        Hasta Que incremento = 9;
+        
+        
+        incremento <- 0;
+        Repetir
+            Escribir "*" Sin Saltar;
+            incremento <- incremento +1;
+        Hasta Que incremento = 5;
+        Escribir " ";
+        incremento <- 0;
+        Repetir
+            Escribir " " Sin Saltar;
+            incremento <- incremento + 1;
+        Hasta Que incremento = 8;
+        
+        
+        incremento <- 0;
+        Repetir
+            Escribir "*" Sin Saltar;
+            incremento <- incremento +1;
+        Hasta Que incremento = 7;
+        
+        Escribir  " ";
+        
+        
+FinProceso
+        
+        </pre>
+    </div>
+    
+
+
+
+    <script src="../script.js"></script>
+</body>
+</html>

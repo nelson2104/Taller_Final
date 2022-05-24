@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional 8</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+    <div class="cajaImg">
+        <p>8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</p>
+        <pre>
+Proceso condicional_8
+            Definir nombreCompleto Como Caracter;
+            Definir id Como Entero;
+            Definir cantidad,compra,decoracionExtra, ventas Como Entero;
+            Definir sabor1,sabor2,sabor3,sabor4,sabor5 Como Caracter;
+            Definir precio1,precio2,precio3,precio4,precio5 Como Entero;
+            Definir decoraciones Como caracter;
+            
+            ventas <- 0;
+            
+            sabor1 <- "CHOCOLATE";
+            sabor2 <- "VAINILLA";
+            sabor3 <- "FRESA";
+            sabor4 <- "AREQUIPE";
+            sabor5 <- "CHOCOLATE CON MANI";
+            
+            decoracionExtra <- 5000;
+            
+            precio1 <- 15000;
+            precio2 <- 12000;
+            precio3 <- 14500;
+            precio4 <- 16000;
+            precio5 <- 22500;
+        
+            
+            Escribir "BIENVENIDO A LA PASTELERIA DE DON CARLOS, LA MEJOR PASTELERIA DE LA CIUDAD";
+            Escribir "Ingresanos Tu nombre y apellidos";
+            Leer nombreCompleto;
+            
+            Escribir "Numero de Identidad Por favor?";
+            leer id ;
+            
+            Escribir "BIENVENIDO " , nombreCompleto;
+            Escribir "LAS TORTAS DISPONIBLES QUE TENEMOS SON LAS SIGUIENTES: CUAL DE ESTOS DESEAS LLEVAR?";
+            Escribir "1. ", sabor1;
+            Escribir "2. ", sabor2;
+            Escribir "3. ", sabor3;
+            Escribir "4. ", sabor4;
+            Escribir "5. ", sabor5;
+            leer compra;
+            
+            Escribir "QUE CANTIDAD EN PORCIONES DESEAS LLEVAR?";
+            Escribir "1: 1 unid";
+            Escribir "2: 2 unidades";
+            Escribir "3: 3 unidades";
+            Escribir "4: 4 unidades";
+            Escribir "5: 5 unidades";
+            leer cantidad;
+            Escribir "REQUIERES LA TORTA CON DECORACIONES? , TENGA EN CUENTA QUE LA DECORACION TIENE UN PRECIO EXTRA DE:", decoracionExtra;
+            leer decoraciones;
+            Si decoraciones = "SI" o decoraciones = "si" Entonces
+                
+                Segun compra Hacer
+                    1:
+                        Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio1*cantidad + decoracionExtra);
+                        Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+                        ventas <- ventas +1;
+                        Escribir "Las ventas Para esta Torta con decoraciones en el Dia de hoy es de:";
+                        Escribir ventas, " venta";
+                    2:
+                        Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio2*cantidad + decoracionExtra);
+                        Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+                        ventas <- ventas +1;
+                        Escribir "Las ventas Para esta Torta con decoraciones en el Dia de hoy es de:";
+                        Escribir ventas, " venta";
+                    3:
+                        Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio3*cantidad + decoracionExtra);
+                        Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+                        ventas <- ventas +1;
+                        Escribir "Las ventas Para esta Torta con decoraciones en el Dia de hoy es de:";
+                        Escribir ventas, " venta";
+                    4:
+                        Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio4*cantidad + decoracionExtra);
+                        Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+                        ventas <- ventas +1;
+                        Escribir "Las ventas Para esta Torta con decoraciones en el Dia de hoy es de:";
+                        Escribir ventas, " venta";
+                    5:
+                        Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio5*cantidad + decoracionExtra);
+                        Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+                        ventas <- ventas +1;
+                        Escribir "Las ventas Para esta Torta con decoraciones en el Dia de hoy es de:";
+                        Escribir ventas, " venta";
+                    De Otro Modo:
+                        Escribir "LA OPCION QUE ELEGISTE NO ESTA DISPONIBLE";
+                FinSegun
+            SiNo
+                Segun compra Hacer
+                    1:
+                        Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio1*cantidad);
+                        Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+                        ventas <- ventas +1;
+                        Escribir "Las ventas Para esta Torta Sin decoraciones en el Dia de hoy es de:";
+                        Escribir ventas, " venta";
+                    2:
+                        Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio2*cantidad);
+                        Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+                        ventas <- ventas +1;
+                        Escribir "Las ventas Para esta Torta Sin decoraciones en el Dia de hoy es de:";
+                        Escribir ventas, " venta";
+                    3:
+                        Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio3*cantidad);
+                        Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+                        ventas <- ventas +1;
+                        Escribir "Las ventas Para esta Torta Sin decoraciones en el Dia de hoy es de:";
+                        Escribir ventas, " venta";
+                    4:
+                        Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio4*cantidad);
+                        Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+                        ventas <- ventas +1;
+                        Escribir "Las ventas Para esta Torta Sin decoraciones en el Dia de hoy es de:";
+                        Escribir ventas, " venta";
+                    5:
+                        Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio5*cantidad);
+                        Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+                        ventas <- ventas +1;
+                        Escribir "Las ventas Para esta Torta Sin decoraciones en el Dia de hoy es de:";
+                        Escribir ventas, " venta";
+                        De Otro Modo:
+                                Escribir "LA OPCION QUE ELEGISTE NO ESTA DISPONIBLE";
+                FinSegun
+                
+            FinSi
+FinProceso
+        
+        </pre>
+    </div>
+    
+
+
+
+    <script src="../script.js"></script>
+</body>
+</html>

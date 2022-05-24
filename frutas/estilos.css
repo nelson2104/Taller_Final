@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(120, 50, 134);
+}
+
+.cajaFrutas {
+    width: 50%;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 8px;
+    box-shadow: inset 10px 10px 53px 0px rgba(0,0,0,0.75);
+    border: 1px solid black;
+}
+
+.cajaFrutas li button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgb(169, 170, 170);
+    color: rgb(0, 0, 0);
+}
+
+.cajaBotones {
+    width: 20%;
+    margin: auto;
+    margin-top: 13px;
+}
+
+.boton1, .boton2 {
+   padding: 7px;
+   border-radius: 4px;
+   margin: 0px 20px;
+   box-shadow: inset 5px 5px 23px 0px rgba(0,0,0,0.75);
+   font-weight: bold;
+   cursor: pointer;
+  
+}
+
+
+
+.boton1 {
+    background-color: rgb(142, 201, 142);
+}
+
+.boton2 {
+    background-color: rgb(103, 103, 226);
+}
+
+.boton1:hover {
+    background-color: rgb(204, 204, 89);
+    transition: all .5s ease-in-out;
+}
+
+.boton2:hover {
+    background-color: rgb(255, 87, 87);
+    transition: all .5s ease-in-out;
+}

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Condicionales</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="cajaImg">
+        <p>Ejercicios Pasados Dentro de Funciones</p>
+        <p>Condicional 1</p>
+        <pre>
+            
+SubProceso edadUsuario ()
+	Definir edad Como Entero;
+	
+	Escribir "Introduzca su edad";
+	leer edad;
+	si edad >= 18 Entonces
+		Escribir "Usted es Mayor de Edad";
+		
+	FinSi
+FinSubProceso
+
+Proceso prueba_funcion_1
+	edadUsuario();
+FinProceso
+
+        
+        </pre>
+    </div>
+    <div class="cajaImg">
+        <p>Condicional 2</p>
+        <pre>
+SubProceso menorDeEdad()
+	Definir edad Como Entero;
+	
+	Escribir "Introduzca su edad";
+	leer edad;
+	
+	si edad < 18 Entonces
+		Escribir "Usted aun es un niño(a)";
+		
+	FinSi
+FinSubProceso
+
+Proceso prueba_funciones_2
+	menorDeEdad();
+FinProceso
+
+        </pre>
+    </div>
+
+    <div class="cajaImg">
+        <p>Condicional 3</p>
+        <pre>
+SubProceso edadDeUsuario()
+	Definir nombre, apellidos Como Caracter;
+	Definir edad Como Entero;
+	
+	Escribir "Cual es Tu Nombre?";
+	leer nombre;
+	
+	Escribir "Cuales son tus Apellidos?";
+	leer apellidos;
+	
+	Escribir "Cual es tu Edad?";
+	leer edad;
+	
+	si edad >= 18 Entonces
+		Escribir nombre, " ", apellidos, " Usted es Mayor de Edad, Por lo tanto puede entrar a la fiesta"; 
+	SiNo
+		Escribir nombre, " ", apellidos, " Usted es Menor de edad, por lo tanto, no puede Entrar a la fiesta, Por favor devuelvase a su casa";
+	FinSi
+	
+FinSubProceso
+
+Proceso prueba_funciones_3
+	edadDeUsuario();
+FinProceso
+
+        </pre>
+    </div>
+    <div class="cajaImg">
+        <p>Condicional 4</p>
+        <pre>
+SubProceso videoTienda()
+	Definir nombreCompleto Como Caracter;
+	Definir pelicula1,pelicula2,pelicula3,pelicula4,pelicula5 Como Caracter;
+	Definir pelicula Como entero;
+	Definir peliculaElegida, anotacion Como Caracter;;
+	
+	pelicula1 <- "Harry Potter";
+	pelicula2 <- "Camino hacia El Terror";
+	pelicula3 <- "La Casa de Cera";
+	pelicula4 <- "Juegos Macabros";
+	pelicula5 <- "Jack El Cazagigantes";
+	
+	
+	
+	Escribir "************ BIENVENIDOS A LA VIDEOTIENDA ************";
+	Escribir "************* DIR: BARRIO EL PORVERNIR ********";
+	
+	
+	Escribir "Por favor Registre su Nombre y apellidos en Nuestra Base de datos";
+	leer nombreCompleto;
+	Escribir "Bienvenido señor ", nombreCompleto, " Tenemos Estas Peliculas Disponibles Para Usted, Cual de estas Series Le gustaria Alquilar?";
+	
+	Escribir "1. ", pelicula1;
+	Escribir "2. ", pelicula2;
+	Escribir "3. ", pelicula3;
+	Escribir "4. ", pelicula4;
+	Escribir "5. ", pelicula5;
+	Leer pelicula;
+	
+	Segun pelicula Hacer
+		1:
+			Escribir "Desea usted Alquilar la pelicula: ", pelicula1, "?";
+			Leer peliculaElegida;
+			Limpiar Pantalla;
+			
+			si peliculaElegida ="SI" o peliculaElegida="si" Entonces
+				Escribir "HAS ELEGIDO LA SERIE ", pelicula1 , " GRACIAS POR SU ALQUILER, QUE LA DISFRUTE";
+				Escribir " ";
+				Escribir "CUENTENOS SI TUVO ALGUN PROBLEMA AL REPRODUCIR SU PELICULA DE ", pelicula1 , " SI PRESENTO DAÑOS, CONFIRME CON UN (SI), DE LO CONTRARIO PRESIONE (NO) O OMITA";
+				Leer anotacion;
+				Si anotacion="SI" o anotacion="si" Entonces
+					Escribir " ";
+					Escribir "LAMENTAMOS MUCHO QUE HAYAS TENIDO PROBLEMAS DE DAÑO CON RESPECTO A LA PELICULA, TRABAJAREMOS PARA QUE CASOS COMO ESTE NO SE VUELVAN A REPETIR, UNA DISCULPA DE ANTEMANO";
+				SiNo
+					Escribir " ";
+					Escribir "GRACIAS POR SU APORTE QUERIDO CLIENTE";
+				FinSi
+			SiNo
+				Escribir "LO INVITAMOS A VOLVER A VER NUESTRO CATALOGO DE PELICULAS DISPONIBLES";;
+			FinSi
+			
+			
+		2:
+			Escribir "SEÑOR ", nombreCompleto, " DESEA USTED ALQUILAR LA PELICULA: ", pelicula2, "?";
+			Leer peliculaElegida;
+			Limpiar Pantalla;
+			
+			si peliculaElegida ="SI" o peliculaElegida="si" Entonces
+				Escribir  "HAS ELEGIDO LA SERIE ", pelicula2 , " GRACIAS POR SU ALQUILER, QUE LA DISFRUTE";
+				Escribir " ";
+				Escribir "CUENTENOS SI TUVO ALGUN PROBLEMA AL REPRODUCIR SU PELICULA DE ", pelicula2 , " SI PRESENTO DAÑOS, CONFIRME CON UN (SI), DE LO CONTRARIO PRESIONE (NO) O OMITA";
+				Leer anotacion;
+				Si anotacion="SI" o anotacion="si" Entonces
+					Escribir " ";
+					Escribir "LAMENTAMOS MUCHO QUE HAYAS TENIDO PROBLEMAS DE DAÑO CON RESPECTO A LA PELICULA, TRABAJAREMOS PARA QUE CASOS COMO ESTE NO SE VUELVAN A REPETIR, UNA DISCULPA DE ANTEMANO";
+				SiNo
+					Escribir " ";
+					Escribir "GRACIAS POR SU APORTE QUERIDO CLIENTE";
+				FinSi
+			SiNo
+				Escribir "LO INVITAMOS A VOLVER A VER NUESTRO CATALOGO DE PELICULAS DISPONIBLES";
+			FinSi
+		3:
+			Escribir "SEÑOR ", nombreCompleto, " DESEA USTED ALQUILAR LA PELICULA: ", pelicula3, "?";
+			Leer peliculaElegida;
+			Limpiar Pantalla;
+			si peliculaElegida ="SI" o peliculaElegida="si" Entonces
+				Escribir  "HAS ELEGIDO LA SERIE ", pelicula3 , " GRACIAS POR SU ALQUILER, QUE LA DISFRUTE";
+				Escribir " ";
+				Escribir "CUENTENOS SI TUVO ALGUN PROBLEMA AL REPRODUCIR SU PELICULA DE ", pelicula3 , " SI PRESENTO DAÑOS, CONFIRME CON UN (SI), DE LO CONTRARIO PRESIONE (NO) O OMITA";
+				Leer anotacion;
+				Si anotacion="SI" o anotacion="si" Entonces
+					Escribir " ";
+					Escribir "LAMENTAMOS MUCHO QUE HAYAS TENIDO PROBLEMAS DE DAÑO CON RESPECTO A LA PELICULA, TRABAJAREMOS PARA QUE CASOS COMO ESTE NO SE VUELVAN A REPETIR, UNA DISCULPA DE ANTEMANO";
+				SiNo
+					Escribir " ";
+					Escribir "GRACIAS POR SU APORTE QUERIDO CLIENTE";
+				FinSi
+			SiNo
+				Escribir "LO INVITAMOS A VOLVER A VER NUESTRO CATALOGO DE PELICULAS DISPONIBLES";
+			FinSi
+		4:
+			Escribir "SEÑOR ", nombreCompleto, " DESEA USTED ALQUILAR LA PELICULA: ", pelicula4, "?";
+			Leer peliculaElegida;
+			Limpiar Pantalla;
+			si peliculaElegida ="SI" o peliculaElegida="si" Entonces
+				Escribir  "HAS ELEGIDO LA SERIE ", pelicula4 , " GRACIAS POR SU ALQUILER, QUE LA DISFRUTE";
+				Escribir " ";
+				Escribir "CUENTENOS SI TUVO ALGUN PROBLEMA AL REPRODUCIR SU PELICULA DE ", pelicula4 , " SI PRESENTO DAÑOS, CONFIRME CON UN (SI), DE LO CONTRARIO PRESIONE (NO) O OMITA";
+				Leer anotacion;
+				Si anotacion="SI" o anotacion="si" Entonces
+					Escribir " ";
+					Escribir "LAMENTAMOS MUCHO QUE HAYAS TENIDO PROBLEMAS DE DAÑO CON RESPECTO A LA PELICULA, TRABAJAREMOS PARA QUE CASOS COMO ESTE NO SE VUELVAN A REPETIR, UNA DISCULPA DE ANTEMANO";
+				SiNo
+					Escribir " ";
+					Escribir "GRACIAS POR SU APORTE QUERIDO CLIENTE";
+				FinSi
+			SiNo
+				Escribir "LO INVITAMOS A VOLVER A VER NUESTRO CATALOGO DE PELICULAS DISPONIBLES";
+			FinSi
+		5:
+			Escribir "SEÑOR ", nombreCompleto, " DESEA USTED ALQUILAR LA PELICULA: ", pelicula5, "?";
+			Leer peliculaElegida;
+			Limpiar Pantalla;
+			si peliculaElegida ="SI" o peliculaElegida="si" Entonces
+				Escribir "HAS ELEGIDO LA SERIE ", pelicula5 , " GRACIAS POR SU ALQUILER, QUE LA DISFRUTE";
+				Escribir " ";
+				Escribir "CUENTENOS SI TUVO ALGUN PROBLEMA AL REPRODUCIR SU PELICULA DE ", pelicula5 , " SI PRESENTO DAÑOS, CONFIRME CON UN (SI), DE LO CONTRARIO PRESIONE (NO) O OMITA";
+				Leer anotacion;
+				Si anotacion="SI" o anotacion="si" Entonces
+					Escribir " ";
+					Escribir "LAMENTAMOS MUCHO QUE HAYAS TENIDO PROBLEMAS DE DAÑO CON RESPECTO A LA PELICULA, TRABAJAREMOS PARA QUE CASOS COMO ESTE NO SE VUELVAN A REPETIR, UNA DISCULPA DE ANTEMANO";
+				SiNo
+					Escribir " ";
+					Escribir "GRACIAS POR SU APORTE QUERIDO CLIENTE";
+				FinSi
+			SiNo
+				Escribir "LO INVITAMOS A VOLVER A VER NUESTRO CATALOGO DE PELICULAS DISPONIBLES";
+			FinSi
+			
+		De Otro Modo:
+			Escribir "LA OPCION QUE ELEGISTE NO ESTA DISPONIBLE";
+	FinSegun
+FinSubProceso
+
+Proceso prueba_funciones_4
+	videoTienda();
+FinProceso
+
+        </pre>
+    </div>
+    <div class="cajaImg">
+        <p>Condicional 5</p>
+        <pre>
+SubProceso ventaMedicamentos()
+	Definir nombre Como Caracter;
+	Definir id Como Entero;
+	Definir opcion Como Entero;
+	Definir producto1,producto2,producto3,producto4,producto5 Como Caracter;
+	Definir precio1,precio2,precio3,precio4,precio5 Como entero;
+	Definir compra, cantidad, total, devolucion como entero;
+	
+	producto1 <- "ACETAMENOFEN (ALIVIA DOLOR Y MALESTAR GENERAL)";
+	producto2 <- "DOLEX FORTE  (ALIVIA EL DOLOR Y LA FIEBRE)";
+	producto3 <- "APRONAX  (DISMINUYE TODA INFLAMACION)";
+	producto4 <- "ASPIRINA  (ALIVIA DOLORES MUSCULARES)";
+	producto5 <- "SEVEDOL  (ALIVIA EL DOLOR DE CABEZA)";
+	
+	precio1 <- 1000;
+	precio2 <- 700;
+	precio3 <- 650;
+	precio4 <- 1200;
+	precio5 <- 900;
+	
+	Escribir "             DROGUERIA MI SALUD           "; 
+	Escribir "        DIRECCION : LOCALIDAD DE SUBA ";
+	Escribir " ";
+	
+	Escribir "Ingrese su nombre completo por favor:";
+	leer nombre;
+	
+	Escribir "Ingrese su numero de documento";
+	leer id;
+	
+	Escribir "GRACIAS POR SU VISITA A NUESTRA DROGUERIA SEÑOR " , nombre , " QUE SERVICIO DESEA CONSULTAR?";
+	Escribir " ";
+	Escribir "ELIJA UNA OPCION:";
+	Escribir "1. CONSULTA DE PRECIOS";
+	Escribir "2. COMPRA DE PRODUCTO";
+	Escribir "3 . SALIR";
+	Leer opcion;
+	segun opcion Hacer
+		1:
+			Escribir "LA LISTA DE PRECIOS ES LA SIGUIENTE:";
+			Escribir "1: ", producto1, " - ", precio1, " $";
+			Escribir "2: ", producto2, " - ", precio2, " $";
+			Escribir "3: ", producto3, " - ", precio3, " $";
+			Escribir "4: ", producto4, " - ", precio4, " $";
+			Escribir "5: ", producto5, " - ", precio5, " $";
+			
+		2:
+			Escribir "CONFIRME CUAL PRODUCTO LLEVARA";
+			Escribir "1: ", producto1,;
+			Escribir "2: ", producto2;
+			Escribir "3: ", producto3;
+			Escribir "4: ", producto4;
+			Escribir "5: ", producto5;
+			Leer compra;
+			
+			Escribir "QUE CANTIDAD DESEA LLEVAR?";
+			Escribir "1";
+			Escribir "2";
+			Escribir "3";
+			Escribir "4";
+			Escribir "5";
+			leer cantidad;
+			
+			Segun compra Hacer
+				1:
+					Escribir "GRACIAS POR SU COMPRA, EL TOTAL A PAGAR ES: ", (precio1*cantidad), "$";
+					Escribir " ";
+					Escribir "SI TIENES ALGUN PROBLEMA CON LA MEDICINA QUE FUE COMPRADA, PRESIONA (1) PARA SU DEVOLUCION, SINO, PRESIONA EL NUMERO QUE DESEES PARA SALIR";
+					Leer devolucion;
+					Si devolucion = 1 Entonces
+						Escribir "MEDICINA DEVUELTA CORRECTAMENTE, LAMENTAMOS LO SUCEDIDO";
+						
+					FinSi
+					
+					
+				2:
+					Escribir  "GRACIAS POR SU COMPRA, EL TOTAL A PAGAR ES: ", (precio2*cantidad), "$";
+					Escribir " ";
+					Escribir "SI TIENES ALGUN PROBLEMA CON LA MEDICINA QUE FUE COMPRADA, PRESIONA (1) PARA SU DEVOLUCION, SINO, PRESIONA EL NUMERO QUE DESEES PARA SALIR";
+					Leer devolucion;
+					Si devolucion = 1 Entonces
+						Escribir "MEDICINA DEVUELTA CORRECTAMENTE, LAMENTAMOS LO SUCEDIDO";
+						
+					FinSi
+				3:
+					Escribir  "GRACIAS POR SU COMPRA, EL TOTAL A PAGAR ES: ", (precio3*cantidad), "$";
+					Escribir " ";
+					Escribir "SI TIENES ALGUN PROBLEMA CON LA MEDICINA QUE FUE COMPRADA, PRESIONA (1) PARA SU DEVOLUCION, SINO, PRESIONA EL NUMERO QUE DESEES PARA SALIR";
+					Leer devolucion;
+					Si devolucion = 1 Entonces
+						Escribir "MEDICINA DEVUELTA CORRECTAMENTE, LAMENTAMOS LO SUCEDIDO";
+						
+					FinSi
+				4:
+					Escribir "GRACIAS POR SU COMPRA, EL TOTAL A PAGAR ES: ", (precio4*cantidad), "$";
+					Escribir " ";
+					Escribir "SI TIENES ALGUN PROBLEMA CON LA MEDICINA QUE FUE COMPRADA, PRESIONA (1) PARA SU DEVOLUCION, SINO, PRESIONA EL NUMERO QUE DESEES PARA SALIR";
+					Leer devolucion;
+					Si devolucion = 1 Entonces
+						Escribir "MEDICINA DEVUELTA CORRECTAMENTE, LAMENTAMOS LO SUCEDIDO";
+						
+					FinSi
+				5:
+					Escribir  "GRACIAS POR SU COMPRA, EL TOTAL A PAGAR ES: ", (precio5*cantidad), "$";
+					Escribir " ";
+					Escribir "SI TIENES ALGUN PROBLEMA CON LA MEDICINA QUE FUE COMPRADA, PRESIONA (1) PARA SU DEVOLUCION, SINO, PRESIONA EL NUMERO QUE DESEES PARA SALIR";
+					Leer devolucion;
+					Si devolucion = 1 Entonces
+						Escribir "MEDICINA DEVUELTA CORRECTAMENTE, LAMENTAMOS LO SUCEDIDO";
+						
+					FinSi
+				De Otro Modo:
+					Escribir "PRODUCTO NO ENCONTRADO";
+			FinSegun
+			
+		3:
+			Escribir "LO ESPERAMOS EN CUALQUIER OTRA OCASION, QUE TENGA UN BUEN DIA";
+			
+	FinSegun	
+FinSubProceso
+
+Proceso prueba_funciones_5
+	ventaMedicamentos();
+	
+FinProceso
+
+        </pre>
+    </div>
+    <div class="cajaImg">
+        <p>Condicional 6</p>
+        <pre>
+SubProceso  tallerMotocicletas()
+	Definir nombreUsuario Como Caracter;
+	Definir cilindraje Como caracter;
+	Definir confirmacion como caracter;
+	Definir observaciones Como entero;
+	
+	Escribir "      BIENVENIDOS AL TALLER DE MOTOS EL MAQUINISTA   ";
+	Escribir "       ********** UN GUSTO PODER AYUDARTE *******";
+	Escribir " ";
+	Escribir "Digitanos tu nombre Por favor:";
+	Leer nombreUsuario;
+	
+	Escribir "Bienvenido ", nombreUsuario, " Tu Motocicleta es De ALTO CILINDRAJE?";
+	leer cilindraje;
+	
+	si cilindraje ="si" o cilindraje = "SI" Entonces
+		Escribir "DESEAS INGRESAR TU MOTOCICLETA A NUESTRO TALLER?";
+		leer confirmacion;
+		si confirmacion ="SI" o confirmacion="si" Entonces
+			Escribir "CUENTANOS! CUALES SON TUS OBSERVACIONES SOBRE TU MOTOCICLETA, QUE PROBLEMA TIENE?";
+			Escribir "1. PROBLEMAS DE TECNOMECANICA";
+			Escribir "2. PROBLEMAS CON UNA RUEDA";
+			Escribir "3. NECESITO UN LAVADO GENERAL";
+			leer observaciones;
+			Segun observaciones Hacer
+				1:
+					Escribir "COMENZAREMOS A REALIZARLE UN CHEQUEO A TU MOTO, Y LE HAREMOS UN PROCEDIMIENTO TECNOMECANICO";
+					Escribir " ";
+					Escribir "EVALUANDO...";
+					Escribir " ";
+					Escribir nombreUsuario, " TERMINADO EL CHEQUEO A TU MOTOCILETA, HEMOS TRABAJADO EN EL SISTEMA ELECTRICO, REEMPLAZANDO LAS LUCES LED DE TU MOTO POR UNAS TOTALMENTE NUEVAS";
+				2:
+					Escribir "VERIFICAREMOS EN QUE ESTADO ESTAN LAS RUEDAS DE TU MOTO, SI NECESITA AIRE SE LO PROPORCIONAREMOS Y SI ES MAS COMPLEJO EL PROBLEMA , DESMONTAREMOS, Y PASAREMOS AL CAMBIO DE LLANTA";
+					Escribir " ";
+					Escribir "EVALUANDO...";
+					Escribir " ";
+					Escribir nombreUsuario, " RESPECTIVAMENTE, LAS RUEDAS TUVIERON QUE SER CAMBIADAS POR SU MAL ESTADO";
+				3:
+					Escribir "LE REALIZAREMOS UN LAVADO COMPLETO A TU MOTO";
+					Escribir " ";
+					Escribir "EVALUANDO...";
+					Escribir " ";
+					Escribir nombreUsuario, " LE HEMOS REALIZAMOS EXITOSAMENTE UN LAVADO A TU MOTOCICLETA";
+				De Otro Modo:
+					Escribir "LO SENTIMOS, NO TENEMOS OTRO SERVICIO MAS";
+			FinSegun
+		SiNo
+			Escribir "TE INVITAMOS A QUE INGRESES TU MOTOCICLETA PARA PODER TRABAJAR CON ELLA, GRACIAS";
+		FinSi
+	SiNo
+		Escribir "LO SENTIMOS, ", nombreUsuario, " SOLO TRABAJAMOS EN MOTOCICLETAS DE ALTO CILINDRAJE";
+	FinSi
+FinSubProceso
+
+Proceso prueba_funciones_6
+	tallerMotocicletas();
+FinProceso
+
+        </pre>
+    </div>
+    <div class="cajaImg">
+        <p>Condicional 7</p>
+        <pre>
+SubProceso estado()
+	Definir nombreCompleto Como Caracter;
+	Definir peso, edad Como Entero;
+	Definir estatura Como Real;
+	Definir bajoPeso, normal,sobrePeso,obeso Como Caracter;
+	
+	bajoPeso <- "BAJO PESO";
+	normal <- "PESO NORMAL";
+	sobrePeso <- "SOBRE PESO";
+	obeso <- "OBESO";
+	
+	//Persona con Bajo peso   < 55kg 
+	//persona con peso normal > 55kg - 68kg 
+	//persona con sobre peso 70kg- 80kg
+	//persona obesa 80kg > 81 kg
+	
+	Escribir "          BIENVENIDO A LA SECRETARIA DE SALUD MUNICIPAL";
+	Escribir " ";
+	Escribir "AQUI PUEDES CONSULTAR TU PESO GRACIAS A NUESTRO NUEVO SISTEMA DE IMC";
+	
+	Escribir "Ingresa aqui tu nombre completo para almacenarlo en nuestra base de Datos";
+	leer nombreCompleto;
+	
+	Escribir "Cual es Su Edad?";
+	leer edad;
+	
+	Escribir "Bienvenido ", nombreCompleto;
+	Escribir "Cual es tu Peso Actual?";
+	Leer  peso;
+	
+	Escribir "Cuanto es tu Estatura?";
+	Leer estatura;
+	
+	Si peso <= 55  Entonces
+		Escribir "Estimado ", nombreCompleto, " Verificando su peso, Su estado Actual es de: ", bajoPeso, " Le Recomendamos Alimentarse De Comidas Altas en Calorias"; 
+	SiNo
+		Si peso > 55 y peso <= 68 Entonces
+			Escribir "Estimado ", nombreCompleto, " Verificando su peso, Su estado Actual es de: ", normal; 
+		SiNo
+			Si peso >= 70 y peso <= 80 Entonces
+				Escribir "Estimado ", nombreCompleto, " Usted se Encuentra en un Estado de: ", sobrePeso, " Lo Invitamos a realizar Rutina de Ejercicio"; 
+			SiNo
+				Escribir "Estimado ", nombreCompleto, " Su estado Actual es: ", obeso , " Le Recomendamos Visitar su Medico y Ponerse en Tratamiento"; 
+			FinSi
+		FinSi
+	FinSi
+	
+FinSubProceso
+
+Proceso prueba_funciones_7
+	estado();
+FinProceso
+
+        </pre>
+    </div>
+    <div class="cajaImg">
+        <p>Condicional 8</p>
+        <pre>
+SubProceso  ventaPastel()
+	Definir nombreCompleto Como Caracter;
+	Definir id Como Entero;
+	Definir cantidad Como Entero;
+	Definir sabor1,sabor2,sabor3,sabor4,sabor5 Como Caracter;
+	Definir precio1,precio2,precio3,precio4,precio5 Como Entero;
+	Definir compra Como Entero;
+	Definir decoraciones Como caracter;
+	Definir decoracionExtra Como Entero;
+	
+	sabor1 <- "CHOCOLATE";
+	sabor2 <- "VAINILLA";
+	sabor3 <- "FRESA";
+	sabor4 <- "AREQUIPE";
+	sabor5 <- "CHOCOLATE CON MANI";
+	
+	decoracionExtra <- 5000;
+	
+	precio1 <- 15000;
+	precio2 <- 12000;
+	precio3 <- 14500;
+	precio4 <- 16000;
+	precio5 <- 22500;
+	
+	
+	Escribir "BIENVENIDO A LA PASTELERIA DE SON CARLOS, LA MEJOR PASTELERIA DE LA CIUDAD";
+	Escribir "Ingresanos Tu nombre y apellidos";
+	Leer nombreCompleto;
+	
+	Escribir "Numero de Identidad Por favor?";
+	leer id ;
+	
+	Escribir "BIENVENIDO " , nombreCompleto;
+	Escribir "LOS SABORES DISPONIBLES QUE TENEMOS SON LOS SIGUIENTES: CUAL DE ESTOS DESEAS LLEVAR?";
+	Escribir "1. ", sabor1;
+	Escribir "2. ", sabor2;
+	Escribir "3. ", sabor3;
+	Escribir "4. ", sabor4;
+	Escribir "5. ", sabor5;
+	leer compra;
+	
+	Escribir "QUE CANTIDAD EN PORCIONES DESEAS LLEVAR?";
+	Escribir "1 unid";
+	Escribir "2 unid";
+	Escribir "3 unid";
+	Escribir "4 unid";
+	Escribir "5 unid";
+	leer cantidad;
+	Escribir "REQUIERES LA TORTA CON DECORACIONES? , TENGA EN CUENTA QUE LA DECORACION TIENE UN PRECIO EXTRA DE:", decoracionExtra;
+	leer decoraciones;
+	Si decoraciones = "SI" o decoraciones = "si" Entonces
+		
+		Segun compra Hacer
+			1:
+				Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio1*cantidad + decoracionExtra);
+			2:
+				Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio2*cantidad + decoracionExtra);
+				Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+			3:
+				Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio3*cantidad + decoracionExtra);
+				Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+			4:
+				Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio4*cantidad + decoracionExtra);
+				Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+			5:
+				Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio5*cantidad + decoracionExtra);
+				Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+			De Otro Modo:
+				Escribir "LA OPCION QUE ELEGISTE NO ESTA DISPONIBLE";
+		FinSegun
+	SiNo
+		Segun compra Hacer
+			1:
+				Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio1*cantidad);
+				Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+			2:
+				Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio2*cantidad);
+				Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+			3:
+				Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio3*cantidad);
+				Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+			4:
+				Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio4*cantidad);
+				Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+			5:
+				Escribir "GRACIAS POR SU COMPRA ESTIMADO ", nombreCompleto, " EL TOTAL A PAGAR ES: $", (precio5*cantidad);
+				Escribir "SU RESPECTIVO PEDIDO, LE ESTARA LLEGANDO EN MINUTOS A SU DIRECCION DE DOMICILIO";
+			De Otro Modo:
+				Escribir "LA OPCION QUE ELEGISTE NO ESTA DISPONIBLE";
+		FinSegun
+		
+	FinSi
+	
+FinSubProceso
+
+Proceso prueba_funciones_8
+	ventaPastel();
+FinProceso
+
+        </pre>
+    </div>
+    <div class="cajaImg">
+        <p>Condicional 9</p>
+        <pre>
+SubProceso areaDeFigura ()
+	Definir figura, baseTriangulo, alturaTriangulo Como Entero;
+	Definir baseRectangulo,alturaRectangulo Como Entero;
+	Definir  baseMayorTrapecio, baseMenorTrapecio,alturaTrapecio Como Entero;
+	
+	
+	Escribir "A Cual de las Siguientes figuras Le Deseas Hallar El Area?";
+	Escribir "1. Triangulo";
+	Escribir "2. Rectangulo";
+	Escribir "3. Trapecio";
+	Leer figura;
+	
+	si figura = 1 Entonces
+		Escribir "Ingresa La Base del triangulo";
+		Leer baseTriangulo;
+		Escribir "Ingresa La Altura del triangulo";
+		Leer alturaTriangulo;
+		Escribir "EL AREA DEL TRIANGULO ES:", (baseTriangulo*alturaTriangulo) / 2;
+		
+	SiNo
+		Si figura = 2 Entonces
+			Escribir "Ingresa La Base del Rectangulo";
+			Leer baseRectangulo;
+			Escribir "Ingresa La Altura del Rectangulo";
+			Leer alturaRectangulo;
+			Escribir "EL AREA DEL RECTANGULO ES:", (baseRectangulo*alturaRectangulo) / 2;
+			
+		SiNo
+			Si figura = 3 Entonces
+				Escribir "Ingresa La Base Mayor del Trapecio";
+				Leer baseMayorTrapecio;
+				Escribir "Ingresa La Base Menor del Trapecio";
+				Leer baseMenorTrapecio;
+				Escribir "Ingresa La Altura del Trapecio";
+				Leer alturaTrapecio;
+				Escribir "EL AREA DEL TRAPECIO ES:", ((baseMayorTrapecio+baseMenorTrapecio) * alturaTrapecio) / 2;
+				
+			SiNo
+				Escribir "LA FIGURA QUE SELECIONASTE NO ESTA DISPONIBLE";
+			FinSi
+		FinSi
+	FinSi
+	
+FinSubProceso
+
+Proceso prueba_funciones_9
+	areaDeFigura();	
+FinProceso
+
+        </pre>
+    </div>
+    <div class="cajaImg">
+        <p>Condicional 10</p>
+        <pre>
+SubProceso transaccionBanco()
+	Definir nombreCompleto Como Caracter;
+	Definir documento,transaccion Como Entero;
+	Definir saldo, retiro, ingreso Como Entero;
+	
+	saldo <- 5500000;
+	
+	
+	Escribir "BIENVENIDOS A SU BANCO FIEL";
+	Escribir " ";
+	Escribir "Por Favor, Ingrese su Nombre Completo";
+	leer nombreCompleto;
+	
+	Escribir "Digite Su Numero de Documento por favor";
+	leer documento;
+	
+	Escribir "BIENVENIDO SEÑOR ", nombreCompleto , " USTED ES EL TITULAR DE SU CUENTA , NUMERO: #000034062"; 
+	Escribir " ";
+	Escribir "CUAL PROCESO DE TRANSACCION DESEA REALIZAR?";
+	Escribir "1. CONSULTAS DE VALOR";
+	Escribir "2. RETIRO";
+	Escribir "3. INGRESO";
+	leer transaccion;
+	
+	Segun transaccion Hacer
+		1:
+			Escribir " ";
+			Escribir "ACTUALMENTE SU CUENTA, TIENE UN SALDO DE: $", saldo;
+			Escribir " ";
+		2:
+			Escribir " ";
+			Escribir "CUANTO DINERO DESEA RETIRAR?";
+			Escribir " ";
+			leer retiro;
+			Si retiro > saldo Entonces
+				Escribir "ERROR!!, SU RETIRO ES MAYOR CON RESPECTO AL SALDO QUE USTED TIENE";
+			SiNo
+				Escribir " ";
+				Escribir "PROCESANDO SU RETIRO...";
+				Escribir " ";
+				Escribir "SE HAN DESCONTADO $", retiro , " DE SU CUENTA, EXPULSANDO DINERO... ";
+				Escribir "SU TOTAL AHORA ES DE $", (saldo-retiro);
+				Escribir " ";
+			FinSi
+		3:
+			Escribir "CUANTO DINERO DESEA USTED INGRESAR A SU CUENTA DE AHORROS?, POR FAVOR DIGITE EL MONTO";
+			Leer ingreso;
+			Escribir " ";
+			Si ingreso > 0 Entonces
+				Escribir "PROCESANDO INGRESO Y AGREGANDOLO A SU CUENTA...";
+				Escribir " ";
+				Escribir "USTED AHORA TIENE UN TOTAL DE: $", (saldo+ingreso);
+			SiNo
+				Escribir " ";
+				Escribir "ERROR !!! NO PUEDE INGRESAR MONTOS NEGATIVOS";
+			FinSi
+			
+		De Otro Modo:
+			Escribir "!!! OPCION INCORRECTA !!!";
+	FinSegun
+	
+FinSubProceso
+
+Proceso prueba_funciones_10
+        </pre>
+
+    </div>
+    
+
+
+
+    <script src="../script.js"></script>
+</body>
+</html>
